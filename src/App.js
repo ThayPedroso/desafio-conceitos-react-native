@@ -29,7 +29,8 @@ export default function App() {
     const repoIndex = repositories.findIndex(repo => repo.id === id)
     
     if(repoIndex < 0) {
-        return response.status(400).json({ error: 'Repository not found.' })
+        console.log('Repository not found.');
+        return 
     }
 
     repositories[repoIndex] = repository
